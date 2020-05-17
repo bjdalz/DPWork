@@ -3,18 +3,22 @@
 
 <html>
 
-<head>
+<header>
 
-Ben's COVID Statistics Analysis
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript"> google.charts.load('current', {packages: ['corechart', 'bar']});</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+	<script src="{{ url_for('static', filename='function.js') }}"></script>
 
 	<title>
 		COVID Stats
 	</title>
 
-<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-<link rel="stylesheet", type="text/css", href="style.css">
+	
 
-</head>
+</header>
 
 <!-- Body -->
 <body>
@@ -22,15 +26,27 @@ Ben's COVID Statistics Analysis
 
 	<!-- Provide an overview of the website -->
 	<br> <br> <br>
+
+	<p><h1 align="center">Mobility has decreased across the globe as people shelter in place. <br>The change in the number of Apple Maps direction requests (Jan 13th - April 14th) illustrates this.</h1></p>
+
+	<br><br><br>	
 	<hr>
 	<br> <br> <br>
 
 	<!-- Let's insert a button to generate graph & placehold for location & placeholder for graph -->
-		<div>
+		<div style="text-align:center">
 
-			<button>
+			<button onclick="InitializeGraph()">
 			<div class = "graph-button"> <a href="#" class="button">
 			See the % decrease in the number of driving and walking direction requests in my current region</button>
+
+			<div id="location" style="text-align:center"> </div>
+
+			<br><br>
+
+			<div id="chart" style="text-align:center"> </div>
+
+
 		</div>
 
 
