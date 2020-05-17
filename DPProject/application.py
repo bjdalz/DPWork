@@ -23,18 +23,18 @@ application = flask.Flask(__name__, template_folder = 'frontend', static_folder 
 #print("Decrease in # of walking calls (%): " + str(data[1]))
 #print("Decrease in # of driving calls (%): " + str(data[2]))
 
-for i in [[-71.08328259999999, 42.3662154],[10.48328259999999, 51.3662154],[-1.78328259999999, 52.4662154]]:
+#for i in [[-71.08328259999999, 42.3662154],[10.48328259999999, 51.3662154],[-1.78328259999999, 52.4662154]]:
 
-	try:
-		long = i[0]
-		lat = i[1]
-		data = dp.location_mobility_data(longitude = long, latitude = lat)
-		print("Country name: ", data[0])
-		print("Decrease in # of walking calls (%): " + str(data[1]))
-		print("Decrease in # of driving calls (%): " + str(data[2]))
+#	try:
+#		long = i[0]
+#		lat = i[1]
+#		data = dp.location_mobility_data(longitude = long, latitude = lat)
+#		print("Country name: ", data[0])
+#		print("Decrease in # of walking calls (%): " + str(data[1]))
+#		print("Decrease in # of driving calls (%): " + str(data[2]))
 
-	except:
-		print("Country not found.")
+#	except:
+#		print("Country not found.")
 
 # ------------------------------------------------------------------------ #
 # Define views
